@@ -6,6 +6,7 @@
 
 int suma(int a, int b);
 int resta(int a, int b);
-
+int multiplicaion(int a, int b);
+int division(int a, int b);
 
 #endif //FUNCIONES_H

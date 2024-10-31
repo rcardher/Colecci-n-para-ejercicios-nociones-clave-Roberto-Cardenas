@@ -19,6 +19,7 @@ add_executable(Colecci_n_para_ejercicios_nociones_clave_Roberto_Cardenas
                "Proyecto 2/main.cpp"
                "Proyecto 2/nuevo.cpp"
                "Proyecto 2/funciones.cpp"
+
        )
 
 include(FetchContent)
@@ -30,6 +31,11 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(fmt)
 target_link_libraries(Proyecto_2 PRIVATE fmt::fmt)
+
+add_library(matematicas STATIC "Proyecto 2/matematicas.cpp")
+target_link_libraries(Proyecto_2 PRIVATE matematicas)
+add_library(matematicas_ SHARED "Proyecto 2/matematicas.cpp")
+target_link_libraries(Proyecto_2 PRIVATE)
 
 
 
