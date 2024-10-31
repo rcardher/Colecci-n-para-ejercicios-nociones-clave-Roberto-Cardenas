@@ -12,9 +12,14 @@ add_executable(Colecci_n_para_ejercicios_nociones_clave_Roberto_Cardenas
         "Proyecto 1/Persona.h"
         "Proyecto 1/Estudiante.h"
         "Proyecto 1/Estudiante.cpp"
-        "Proyecto 2/principal.cpp"
-        "Proyecto 2/principal.h"
-        "Proyecto 2/nuevo.cpp")
+        "Proyecto 2/main.h")
+
+       add_executable(Proyecto_2
+               "Proyecto 2/main.h"
+               "Proyecto 2/main.cpp"
+               "Proyecto 2/nuevo.cpp"
+               "Proyecto 2/funciones.cpp"
+       )
 
 include(FetchContent)
 FetchContent_Declare(
@@ -24,4 +29,7 @@ FetchContent_Declare(
 )
 
 FetchContent_MakeAvailable(fmt)
-target_link_libraries(Colecci_n_para_ejercicios_nociones_clave_Roberto_Cardenas PRIVATE fmt::fmt)
+target_link_libraries(Proyecto_2 PRIVATE fmt::fmt)
+
+
+
